@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Christmas Countdown & Slideshow</title>
+    <link rel="stylesheet" href="../Project9_countdown_slideshow/CSS/Main.css">
+</head>
+<body>
+    <h1>Christmas Activities</h1>
+
+    <!--SLIDESHOW SECTION-->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="../Project9_countdown_slideshow/IMG/Christmas1.jpg" alt="A picture of a Christmas tree">
+            <div class="caption">Decorating the Christmas Tree</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="../Project9_countdown_slideshow/IMG/Christmas2.jpg" alt="Picture of Christmas Cookies">
+            <div class="caption">Baking Christmas Cookies</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="../Project9_countdown_slideshow/IMG/Christmas3.jpg" alt="Picture of two Snowmen">
+            <div class="caption">Building Snowmen</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="../Project9_countdown_slideshow/IMG/Christmas4.jpg" alt="Picture of a mall decorated for Christmas">
+            <div class="caption">Christmas shopping</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="../Project9_countdown_slideshow/IMG/Christmas5.jpg" alt="Christmas of presents">
+            <div class="caption">Wrapping presents</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="../Project9_countdown_slideshow/IMG/Christmas6.jpg" alt="A picture of a women watching Netflix in a Christmas background">
+            <div class="caption">Watching Christmas movies</div>
+        </div>
+
+        <!--NAV buttons-->
+        <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlides(1)">&#10095;</a>
+    </div>
+
+    <!--Dots slide indicators-->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+    
+    <hr>
+
+
+      <!--COUNTDOWN TO CHRISTMAS-->
+      <div class="countdown-section">
+        <h2>Countdown to Christmas!</h2>
+        <div id="timer"></div>
+      </div>
+    
+    <script src="../Project9_countdown_slideshow/JS/Main.js"></script>
+</body>
+</html>
