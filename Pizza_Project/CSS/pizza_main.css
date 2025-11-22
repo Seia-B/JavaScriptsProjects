@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faf7f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffd700;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(to bottom, #fff8e1 0%, #ffe4b5 100%);
+    border: 4px dashed #ff8c00;
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 1200px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 300px;
+}
+
+.hero-image-left,
+.hero-image-right {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #c41e3a;
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+    color: #ff8c00;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Order Title */
+.order-title {
+    text-align: center;
+    margin: 40px 0 30px 0;
+}
+
+.order-title h2 {
+    color: #ffa500;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Menu Background */
+#menuBG {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#frmMenu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Menu Cards */
+.menu-card {
+    background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+    border: 3px solid #654321;
+    border-radius: 20px;
+    padding: 25px;
+    width: 380px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ffd700;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.option-group {
+    margin-bottom: 15px;
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    color: #ffd700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.radio-option:hover,
+.checkbox-option:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.radio-option input,
+.checkbox-option input {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.note {
+    color: #ffd700;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Buttons */
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 30px 0;
+}
+
+.btn-cancel,
+.btn-order {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #333;
+    border-radius: 10px 0 0 10px;
+}
+
+.btn-order {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #333;
+    border-radius: 0 10px 10px 0;
+}
+
+.btn-cancel:hover,
+.btn-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Receipt */
+#cart {
+    background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+    border: 3px solid #654321;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.receipt-title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ffd700;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.receipt-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.receipt-left,
+.receipt-right {
+    flex: 1;
+}
+
+.receipt-header {
+    color: #87ceeb;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#showText,
+#totalPrice {
+    color: #ffd700;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#finalTotal {
+    text-align: right;
+    color: #87ceeb;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ffd700;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image-left,
+    .hero-image-right {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .menu-card {
+        width: 100%;
+    }
+    
+    .receipt-content {
+        flex-direction: column;
+    }
+}

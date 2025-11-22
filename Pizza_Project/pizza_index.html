@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pizza Drill Demo</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <script src="JSS/Pizza_main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="CSS/pizza_main.css"/>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <div class="header">
+        <h1 class="logo">Pizza Mama</h1>
+        <div class="nav">
+            <a href="#order">Order</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Banner Section -->
+    <div class="hero-banner">
+        <img src="Image/Pizza_1.jpg" alt="Left Character" class="hero-image-left">
+        <div class="hero-content">
+            <h2 class="hero-title">Pizza Drill Tutorial</h2>
+            <p class="hero-subtitle">Build your perfect pizza with our delicious options!</p>
+        </div>
+        <img src="Image/Pizza_2.jpg" alt="Right Character" class="hero-image-right">
+    </div>
+
+
+    <!-- Order Section -->
+    <div class="order-title">
+        <h2>- - - Order - - -</h2>
+    </div>
+
+    <div id="menuBG">
+        <form id="frmMenu">
+            <!-- Size Section -->
+            <div class="menu-card">
+                <h3 class="card-title">Size</h3>
+                <div class="option-group">
+                    <label class="radio-option">
+                        <input class="size" type="radio" name="Size" value="Personal Pizza">
+                        <span>Personal................$6.00</span>
+                    </label>
+                    <label class="radio-option">
+                        <input class="size" type="radio" name="Size" value="Medium Pizza" checked>
+                        <span>Medium................$10.00</span>
+                    </label>
+                    <label class="radio-option">
+                        <input class="size" type="radio" name="Size" value="Large Pizza">
+                        <span>Large................$14.00</span>
+                    </label>
+                    <label class="radio-option">
+                        <input class="size" type="radio" name="Size" value="Extra Large Pizza">
+                        <span>Extra Large................$16.00</span>
+                    </label>
+                    <label class="radio-option">
+                        <input class="size" type="radio" name="Size" value="Family Pizza">
+                        <span>Family................$20.00</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Meats Section -->
+            <div class="menu-card">
+                <h3 class="card-title">Meat</h3>
+                <div class="option-group">
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Pepperoni">
+                        <span>Pepperoni</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Sausage">
+                        <span>Sausage</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Canadian Bacon">
+                        <span>Canadian Bacon</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Ground Beef">
+                        <span>Ground Beef</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Chicken">
+                        <span>Chicken</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Anchovy">
+                        <span>Anchovy</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Donair">
+                        <span>Donair</span>
+                    </label>
+                </div>
+                <p class="note">note: First meat topping is complimentary, +$1.00/topping for additional toppings.</p>
+            </div>
+
+            <!-- Vegetables Section -->
+            <div class="menu-card">
+                <h3 class="card-title">Veggies</h3>
+                <div class="option-group">
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Mushrooms">
+                        <span>Mushrooms</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Onions">
+                        <span>Onions</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Tomatoes">
+                        <span>Tomatoes</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Olives">
+                        <span>Olives</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input class="toppings" type="checkbox" name="Topping" value="Green Peppers">
+                        <span>Green Peppers</span>
+                    </label>
+                </div>
+                <p class="note">note: First veggie topping is complimentary, +$1.00/topping for additional toppings.</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-container">
+                <button type="button" class="btn-cancel" onclick="resetForm()">Cancel</button>
+                <button type="button" id="btnOrder" class="btn-order" onclick="getReceipt()">Place Order</button>
+            </div>
+
+            <!-- Receipt Section -->
+            <div id="cart">
+                <h3 class="receipt-title">- - - Order - - -</h3>
+                <div class="receipt-content">
+                    <div class="receipt-left">
+                        <p class="receipt-header">Item</p>
+                        <div id="showText"></div>
+                    </div>
+                    <div class="receipt-right">
+                        <p class="receipt-header">Subtotal</p>
+                        <div id="totalPrice"></div>
+                    </div>
+                </div>
+                <div id="finalTotal"></div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Copyright Pizza Drill 2025</p>
+    </div>
+</body>
+</html>
