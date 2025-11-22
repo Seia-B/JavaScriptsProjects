@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Switch Statement</title>
+        <link rel="stylesheet" href="../JavaScript/CSS/CSS_1.css">
+    </head>
+    <body>
+        <h1>What is your favorite gaming console?</h1>
+        <h3>Pick your favorite console from this list:</h3>
+        <ul>
+            <li>Playstation</li>
+            <li>Xbox</li>
+            <li>Nintendo</li>
+            <li>Steam Deck</li>
+            <li>Switch</li>
+        </ul>
+        <h3>Enter your choice below:</h3>
+
+        <input id="Console_Input" type="text">
+        <button onClick="Console_Function()">Submit Answer</button>
+        <p id="Output"></p>
+
+        <h3>All consoles in the list:</h3>
+        <div class="console-item">PlayStation</div>
+        <div class="console-item">Xbox</div>
+        <div class="console-item">Nintendo</div>
+        <div class="console-item">Steam Deck</div>
+        <div class="console-item">Switch</div>
+    
+        <button onclick="Highlight_Consoles()">Highlight All Consoles</button>
+    
+        <h3>Draw Your Favorite Console Logo:</h3>
+        <canvas id="myCanvas" width="400" height="150"></canvas>
+        <button onclick="Draw_PlayStation()">PlayStation</button>
+        <button onclick="Draw_Xbox()">Xbox</button>
+        <button onclick="Draw_Nintendo()">Nintendo</button>
+
+        <script src="../JavaScript/JS/Javascript_1.js" defer></script>
+    </body>
+</html>
