@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .lookAtMe {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+    </head>
+    <script>
+        $(document).ready(function() {
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                            <p class='hidden'>Hidden Paragraph 4</p>\
+                            <p class='hidden'>Hidden Paragraph 5</p>\
+                            </div>\
+                            </div>\
+                            </body>"
+            );
+            $("#2").css({color:"red"});
+            $("#3").click(function() {
+                $("h1").hide();
+            });
+            
+            // Additional namespaced event
+            $("#1").on("click.myNamespace", function() {
+                $(this).css({color:"blue", fontWeight:"bold"});
+            });
+            
+            // Fade in all hidden paragraphs; then add a style class to them
+            $("p.hidden").fadeIn(750).addClass("lookAtMe");
+        });
+    </script>
+</html>
