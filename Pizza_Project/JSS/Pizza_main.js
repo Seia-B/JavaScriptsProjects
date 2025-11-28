@@ -93,3 +93,7 @@ function resetForm() {
     document.getElementById("totalPrice").innerHTML = "";
     document.getElementById("finalTotal").innerHTML = "";
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.remove('fade-out');
+});

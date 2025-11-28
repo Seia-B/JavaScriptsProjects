@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards & Coupons</title>
+    <link rel="stylesheet" href="./CSS/Popup.css">
+</head>
+<body>
+    <div class="page-content">
+        <h1>Exclusive Rewards Program</h1>
+        <p>Join now and unlock amazing discounts!</p>
+        <button id="openRewardsBtn" class="rewards-btn">🎁 Join Rewards Program</button>
+    </div>
+
+    <!-- Rewards Popup Modal -->
+    <div id="rewardsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="rewards-header">
+                <div class="rewards-icon">🎉</div>
+                <h2>Join Our Rewards Program</h2>
+                <p>Get instant access to exclusive coupons and rewards!</p>
+            </div>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <span class="benefit-icon">💰</span>
+                    <span>15% Off First Purchase</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🎁</span>
+                    <span>Birthday Rewards</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">⭐</span>
+                    <span>Earn Points on Every Order</span>
+                </div>
+            </div>
+
+            <form id="rewardsForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+
+                <button type="submit">Join Now & Get 15% Off</button>
+                
+                <p class="privacy-note">By joining, you agree to receive promotional emails and SMS.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <span class="close-success">&times;</span>
+            <div class="success-animation">
+                <div class="checkmark">✓</div>
+            </div>
+            <h2>Welcome to the Rewards Program!</h2>
+            <p class="success-message">You're now part of our exclusive community</p>
+            
+            <div class="coupon-display">
+                <p class="coupon-label">Your Welcome Coupon:</p>
+                <div class="coupon-code">WELCOME15</div>
+                <p class="coupon-details">15% OFF your next purchase</p>
+            </div>
+
+            <div class="rewards-info">
+                <h3>Your Rewards</h3>
+                <div class="reward-card">
+                    <span class="reward-emoji">🎂</span>
+                    <div>
+                        <strong>Birthday Bonus</strong>
+                        <p>Get a special gift on your birthday</p>
+                    </div>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-emoji">💎</span>
+                    <div>
+                        <strong>Points Program</strong>
+                        <p>Earn 1 point per $1 spent</p>
+                    </div>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-emoji">🎯</span>
+                    <div>
+                        <strong>Exclusive Deals</strong>
+                        <p>Member-only promotions and early access</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="closeSuccessBtn" class="action-btn">Start Shopping</button>
+        </div>
+    </div>
+
+    <script src="./JS/Popup.js"></script>
+</body>
+</html>

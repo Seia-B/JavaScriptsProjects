@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Wonderland</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1>🎄 Christmas Wonderland</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#traditions">Traditions</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <h2>Welcome to Christmas Wonderland</h2>
+        <p>Experience the magic of the holiday season</p>
+        
+        <!-- Automatic Slideshow -->
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="./Images/Tree.jpg" alt="Christmas Tree">
+                <div class="slide-caption">
+                    <h3>Christmas Tree</h3>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="./Images/Santa.jpg" alt="Santa Claus">
+                <div class="slide-caption">
+                    <h3>Santa Claus</h3>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="./Images/Winter.jpg" alt="Winter Wonderland">
+                <div class="slide-caption">
+                    <h3>Winter Wonderland</h3>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="./Images/Gifts.jpg" alt="Christmas Gifts">
+                <div class="slide-caption">
+                    <h3>Christmas Gifts</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traditions Section -->
+    <section id="traditions" class="section traditions-section">
+        <h2>Christmas Traditions</h2>
+        <div class="content-grid">
+            <div class="tradition-card">
+                <h3>🎅 Santa's Visit</h3>
+                <p>The magical night when Santa delivers presents to children around the world.</p>
+            </div>
+            <div class="tradition-card">
+                <h3>🎄 Decorating Trees</h3>
+                <p>Families gather to decorate beautiful Christmas trees with ornaments and lights.</p>
+            </div>
+            <div class="tradition-card">
+                <h3>🎁 Gift Giving</h3>
+                <p>Exchanging presents with loved ones to spread joy and show appreciation.</p>
+            </div>
+            <div class="tradition-card">
+                <h3>🍪 Baking Cookies</h3>
+                <p>Making delicious holiday treats to share with family and friends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Zoom -->
+    <section id="gallery" class="section gallery-section">
+        <h2>Christmas Gallery</h2>
+        <p>Hover over images to zoom in</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="zoom-image">
+                    <img src="./Images/Tree.jpg" alt="Christmas Tree">
+                </div>
+                <p>Christmas Tree</p>
+            </div>
+            <div class="gallery-item">
+                <div class="zoom-image">
+                    <img src="./Images/Winter.jpg" alt="Winter Scene">
+                </div>
+                <p>Winter Wonderland</p>
+            </div>
+            <div class="gallery-item">
+                <div class="zoom-image">
+                    <img src="./Images/Santa.jpg" alt="Santa Claus">
+                </div>
+                <p>Santa Claus</p>
+            </div>
+            <div class="gallery-item">
+                <div class="zoom-image">
+                    <img src="./Images/Gifts.jpg" alt="Christmas Gifts">
+                </div>
+                <p>Presents</p>
+            </div>
+            <div class="gallery-item">
+                <div class="zoom-image">
+                    <img src="./Images/Lights.jpg" alt="Decorated Tree">
+                </div>
+                <p>Festive Decorations</p>
+            </div>
+            <div class="gallery-item">
+                <div class="zoom-image">
+                    <img src="./Images/Snowkiss (1).jpg" alt="Snowy Scene">
+                </div>
+                <p>Snowy Night</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="section recipes-section">
+        <h2>Holiday Recipes</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <h3>Gingerbread Cookies</h3>
+                <p>Classic holiday cookies with warm spices and festive decorations.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>Hot Chocolate</h3>
+                <p>Rich, creamy hot chocolate topped with marshmallows and whipped cream.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>Candy Canes</h3>
+                <p>Traditional peppermint treats that bring holiday cheer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Contact Button -->
+    <button id="contactBtn" class="contact-button">
+        📧 Contact Us
+    </button>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🎄 Get in Touch</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message 🎅</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Christmas Wonderland. Spreading holiday cheer! 🎄✨</p>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>

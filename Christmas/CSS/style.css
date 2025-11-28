@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #1a472a 100%);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #8B0000;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar h1 {
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.navbar ul {
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 2rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    padding: 100px 2rem 2rem 2rem;
+    text-align: center;
+}
+
+.home-section {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: white;
+}
+
+.traditions-section {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.gallery-section {
+    background: linear-gradient(135deg, #2c5364 0%, #203a43 50%, #0f2027 100%);
+    color: white;
+}
+
+.recipes-section {
+    background: #fff;
+    color: #333;
+}
+
+.section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.section p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: 3rem auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    height: 500px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(139, 0, 0, 0.8);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.slide-caption h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.slide.active {
+    display: block;
+}
+
+.fade {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tradition-card, .recipe-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tradition-card:hover, .recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tradition-card h3, .recipe-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #8B0000;
+}
+
+/* Gallery with Zoom */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 200px;
+}
+
+.zoom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.zoom-image:hover img {
+    transform: scale(1.3);
+}
+
+.gallery-item p {
+    padding: 1rem;
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Sticky Contact Button */
+.contact-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #FFD700;
+    color: #8B0000;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.contact-button:hover {
+    background: #FFA500;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.3s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #8B0000;
+}
+
+.modal-content h2 {
+    color: #8B0000;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8B0000;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #a00000;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1.3rem;
+    }
+    
+    .navbar ul {
+        float: none;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .navbar ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
